@@ -1,0 +1,7 @@
+app1:
+	echo "from app1"
+app2:
+	echo "from app2"
+app3:
+	echo "from app3"
+

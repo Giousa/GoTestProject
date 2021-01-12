@@ -25,3 +25,23 @@ type DasKtdmInfo struct {
 }
 
 
+
+// DasNovelInfo ...
+//type:  武侠古典
+type DasNovelInfo struct {
+	Id int `json:"id"`
+	Title string `json:"title"`
+	Url string `json:"url"`
+	Type string `json:"type"`
+	CreateTime time.Time `json:"create_time"`
+}
+
+// DasNovelDetl ...
+type DasNovelDetl struct {
+	Id int `json:"id"`
+	NovelId int `json:"novel_id"`
+	SubTitle string `json:"sub_title"`
+	SubUrl string `json:"sub_url"`
+	Content string `json:"content"`
+	CreateTime time.Time `json:"create_time"`
+}

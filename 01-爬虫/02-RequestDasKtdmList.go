@@ -15,7 +15,7 @@ func main() {
 
 	engin := db.InitMysqlEngin()
 	//已经收录100
-	sql := "select * from das_ktdm_info limit 4001,1000"
+	sql := "select * from das_ktdm_info limit 7001,1000"
 
 	queryList,err := engin.QueryString(sql)
 	if err != nil{
@@ -29,7 +29,7 @@ func main() {
 			url := v["url"]
 			id,_ := strconv.Atoi(v["id"])
 
-			fmt.Printf("正在存储第 %v 页 数据\n",k+4001)
+			fmt.Printf("正在存储第 %v 页 数据\n",k+7001)
 			fmt.Println(url)
 
 			requestKtdmInfo(url,id)
