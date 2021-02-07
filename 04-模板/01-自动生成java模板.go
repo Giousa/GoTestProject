@@ -192,41 +192,41 @@ var classNameParams = flag.String("className", "", "input your classNameList(用
 func main() {
 
 	//解析命令行参数
-	flag.Parse()
-	//输出命令行参数
-	fmt.Printf("【packageParam=%s】【classNameParams=%s】",*packageParam,*classNameParams)
-
-	nameMap := make([]string,0)
-	paramList := strings.Split(*classNameParams,"-")
-	for _,v := range paramList{
-		nameMap = append(nameMap, v)
-	}
-
-	javaModel := JavaModel{
-		Package: *packageParam,
-		NameMap: nameMap,
-	}
-
-	if len(javaModel.NameMap) == 0 || javaModel.Package == ""{
-		fmt.Println("package或className缺失")
-		return
-	}
-
-	javaModel.Run()
-
-
-
+	//flag.Parse()
+	////输出命令行参数
+	//fmt.Printf("【packageParam=%s】【classNameParams=%s】",*packageParam,*classNameParams)
+	//
 	//nameMap := make([]string,0)
-	//nameMap = append(nameMap, "Login")
-	//nameMap = append(nameMap, "Register")
-	//nameMap = append(nameMap, "EducInfo")
+	//paramList := strings.Split(*classNameParams,"-")
+	//for _,v := range paramList{
+	//	nameMap = append(nameMap, v)
+	//}
 	//
 	//javaModel := JavaModel{
-	//	Package: "com.giousa.wx",
+	//	Package: *packageParam,
 	//	NameMap: nameMap,
 	//}
 	//
+	//if len(javaModel.NameMap) == 0 || javaModel.Package == ""{
+	//	fmt.Println("package或className缺失")
+	//	return
+	//}
+	//
 	//javaModel.Run()
+
+
+
+	nameMap := make([]string,0)
+	nameMap = append(nameMap, "Login")
+	nameMap = append(nameMap, "Register")
+	nameMap = append(nameMap, "EducInfo")
+
+	javaModel := JavaModel{
+		Package: "com.giousa.wx",
+		NameMap: nameMap,
+	}
+
+	javaModel.Run()
 
 	
 }

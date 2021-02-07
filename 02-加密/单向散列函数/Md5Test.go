@@ -32,9 +32,9 @@ func getMD5_2(str []byte) string {
 	// 1. 创建一个使用MD5校验的Hash对象`
 	myHash := md5.New()
 	// 2. 通过io操作将数据写入hash对象中
-	io.WriteString(myHash, "hello")
-	//io.WriteString(myHash, ", world")
-	myHash.Write([]byte(", world"))
+	io.WriteString(myHash, string(str))
+	//或者
+	//myHash.Write(str)
 	// 3. 计算结果
 	result := myHash.Sum(nil)
 	fmt.Println(result)

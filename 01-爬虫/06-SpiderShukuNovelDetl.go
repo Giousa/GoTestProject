@@ -26,7 +26,7 @@ func main() {
 	enc6 = mahonia.NewDecoder("gbk")
 
 	//TODO 明天继续
-	sql := "select * from das_novel_info where type = '其他类别' limit 53,1000"
+	sql := "select * from das_novel_info where type = '其他类别' limit 421,1000"
 
 	queryList,err := engin6.QueryString(sql)
 	if err != nil{
@@ -38,7 +38,7 @@ func main() {
 		url := v["url"]
 		id,_ := strconv.Atoi(v["id"])
 
-		fmt.Printf("正在存储第 %v 页 数据\n",k+53)
+		fmt.Printf("正在存储第 %v 页 数据\n",k+421)
 		fmt.Println(url)
 
 		requestKtdmQtlxInfo(url,id)
