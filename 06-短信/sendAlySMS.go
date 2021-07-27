@@ -72,8 +72,8 @@ func main() {
 func sendBackupsSMS(phone string,data string)  {
 	client, err := dysmsapi.NewClientWithAccessKey(
 		"cn-hangzhou",
-		"LTAIh6K3QYEOtQMo",
-		"56jYl2vckHmKnduwQt4mAjLPfYNf64")
+		"11111111",
+		"22222222")
 
 	request := dysmsapi.CreateSendSmsRequest()
 
@@ -93,8 +93,8 @@ func sendBackupsSMS(phone string,data string)  {
 func sendAbnormalSMS(phone string,data string)  {
 	client, err := dysmsapi.NewClientWithAccessKey(
 		"cn-hangzhou",
-		"LTAIh6K3QYEOtQMo",
-		"56jYl2vckHmKnduwQt4mAjLPfYNf64")
+		"111111111",
+		"222222222")
 
 	request := dysmsapi.CreateSendSmsRequest()
 
