@@ -78,8 +78,8 @@ func sendBackupsSMS(phone string,data string)  {
 	request := dysmsapi.CreateSendSmsRequest()
 
 	request.PhoneNumbers = phone
-	request.SignName = "哈珥斯"
-	request.TemplateCode = "SMS_209836628"
+	request.SignName = "333333"
+	request.TemplateCode = "444444444"
 
 	request.TemplateParam = data
 
@@ -99,8 +99,8 @@ func sendAbnormalSMS(phone string,data string)  {
 	request := dysmsapi.CreateSendSmsRequest()
 
 	request.PhoneNumbers = phone
-	request.SignName = "哈珥斯"
-	request.TemplateCode = "SMS_209836629"
+	request.SignName = "3333333"
+	request.TemplateCode = "444444444"
 	request.TemplateParam = data
 
 	response, err := client.SendSms(request)
